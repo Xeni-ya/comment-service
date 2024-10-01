@@ -14,11 +14,14 @@ function checkSpam(str) {
 
 function addComment() {
   const usernameInput = document.getElementById('username');
-  const avatarInput = document.getElementById('avatar');
+  const linkInput = document.getElementById('link');
   const commentInput = document.getElementById('comment');
-  const chatInput = document.getElementById('chat');
-
-  const username = username.value;
-  const avatar = avatarInput.value.trim();
-  const chat = checkSpam(chatInput.value);
+  const button = document.querySelector('.submit');
+  const chat = document.getElementById('chat');
+    
+  const textComment = usernameInput.value;
+//checkSpam();
+  chat.innerText = console.log('textComment')
 }
+//button.EventListener
+addComment();
