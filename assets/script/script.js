@@ -46,7 +46,7 @@ const commentText = document.getElementById('comment');
 
 // Преобразование имени
 function transformName(name) {
-  name.trim().charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+  return name.trim().charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 }
 
 //фильтрация спама
@@ -54,18 +54,14 @@ function checkSpam(str) {
   return str.replace(/viagra/gi, '***').replace(/xxx/gi, '***');
 }
 
-// Проверить, что ссылка действительна (например, начинается с "http://" или "https://")
-const isValidComplexUrl = (url) => {
-  const regex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
-  return regex.test(url);
-}
+// Обработчик события на кнопку
+const btn = document.querySelector('.submit');
 
-// Обработчик события submit
-form.addEventListener('submit', function (evt) {
+btn.addEventListener('click', function (evt) {
   evt.preventDefault(); // Отмена стандартного поведения формы
 
   const usernameValue = transformName(username.value);
-  const avatarLinkValue = isValidComplexUrl(avatarLink.value) ? avatarLink.value : 'default-avatar.png';
+  const avatarLinkValue = avatarLink.value;
   const commentValue = checkSpam(commentText.value);
 
   addComment(usernameValue, avatarLinkValue, commentValue);
@@ -76,10 +72,26 @@ form.addEventListener('submit', function (evt) {
   commentText.value = '';
 });
 
-const addComment = (username, avatarLink, commentText) => {
-  transformName(username.value);
-  transformName(avatarLink.value);
-  checkSpam(commentText.value);
-}
+const addComment = (username, avatarLink, comment) => {
+  const chatDiv = document.getElementById('chat');
 
-// Создание элемента для отображения комментария
+  const chatElement = document.createElement('div');
+
+  const avatarImg = document.createElement('img');
+  avatarImg.src = avatarLink;
+  avatarImg.alt = 'Аватар';
+  avatarImg.style.width = '50px';
+  avatarImg.style.height = '50px';
+  avatarImg.style.borderRadius = '50%';
+  chatElement.appendChild(avatarImg);
+
+  const nameElement = document.createElement('h3');
+  nameElement.textContent = username;
+  chatElement.appendChild(nameElement);
+
+  const messageElement = document.createElement('p');
+  messageElement.textContent = comment;
+  chatElement.appendChild(messageElement);
+
+  chatDiv.appendChild(chatElement);
+}
