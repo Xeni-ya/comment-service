@@ -1,91 +1,135 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./assets/img/Sheet with painting.ico" type="image/ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/style/style.css">
-  <title>Сервис комментариев со спам фильтром</title>
-</head>
-<body>
-  <main class="main">
-    <div class="title">
-      <div>
-        <img src="./assets/img/Computer with programs.ico" alt="Computer">
-        <p>Сервис</p>
-      </div>
-      <div>
-        <img src="./assets/img/WordPad document.ico" alt="WordPad">
-        <p>комментариев</p>
-      </div>
-      <div>
-        <img src="./assets/img/Recycle Bin with document.ico" alt="Recycle">
-        <p>со спам</p>
-      </div>
-      <div>
-        <img src="./assets/img/Opened Folder.ico" alt="Folder">
-        <p>фильтром</p>
-      </div>
-    </div>
-    
-    <section class="section">
-      <div class="section__container">
-        <div class="wrap">
-          <h2 class="subtitle">Оставьте ваш комментарий</h2>
-          <div class="inner">x</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/Sheet with painting.ico"
+      type="image/ico"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <title>Сервис комментариев со спам фильтром</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="title">
+        <div>
+          <img src="./assets/img/Computer with programs.ico" alt="Computer" />
+          <p>Сервис</p>
         </div>
-        
-        <form method="post" autocomplete="on" class="form-inner">
-          <label for="username">Введите ваше имя:</label>
-          <input type="text" id="username" name="username" autofocus required>
-
-          <label for="link">Введите ссылку вашего аватара:</label>
-          <input type="text" id="link" name="link" required>
-
-          <label for="comment">Оставьте комментарий:</label>
-          <textarea id="comment" name="comment" rows="5" cols="33" required></textarea>
-
-          <input type="submit" value="Отправить" class="submit" onclick="addComment()">
-        </form>
-      </div>
-
-      <div class="section__container">
-        <div class="wrap">
-          <h2 class="subtitle">Чат</h2>
-          <div class="inner">x</div>
+        <div>
+          <img src="./assets/img/WordPad document.ico" alt="WordPad" />
+          <p>комментариев</p>
         </div>
-        <div id="chat"></div>
+        <div>
+          <img src="./assets/img/Recycle Bin with document.ico" alt="Recycle" />
+          <p>со спам</p>
+        </div>
+        <div>
+          <img src="./assets/img/Opened Folder.ico" alt="Folder" />
+          <p>фильтром</p>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="footer-start">
-      <img src="./assets/img/Windows logo (without text).ico" alt="иконка виндоус" class="footer-start__img">
-      start
-    </div>
+      <section class="section">
+        <div class="section__container">
+          <div class="wrap">
+            <h2 class="subtitle">Оставьте ваш комментарий</h2>
+            <div class="inner">x</div>
+          </div>
 
-    <div class="footer-inner">
-      <div class="footer-inner__comment">
-        <img src="./assets/img/Move document.ico" alt="иконка" class="footer-comment__img">
-        Оставьте ваш комментарий
+          <form method="post" autocomplete="on" class="form-inner">
+            <label for="username">Введите ваше имя:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              autofocus
+              required
+            />
+
+            <label for="link">Введите ссылку вашего аватара:</label>
+            <input type="text" id="link" name="link" required />
+
+            <label for="comment">Оставьте комментарий:</label>
+            <textarea
+              id="comment"
+              name="comment"
+              rows="5"
+              cols="33"
+              required
+            ></textarea>
+
+            <input
+              type="submit"
+              value="Отправить"
+              class="submit"
+              onclick="addComment()"
+            />
+          </form>
+        </div>
+
+        <div class="section__container">
+          <div class="wrap">
+            <h2 class="subtitle">Чат</h2>
+            <div class="inner">x</div>
+          </div>
+          <div id="chat"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-start">
+        <img
+          src="./assets/img/Windows logo (without text).ico"
+          alt="иконка виндоус"
+          class="footer-start__img"
+        />
+        start
       </div>
-      <div class="footer-inner__chat">
-        <img src="./assets/img/Move document.ico" alt="иконка" class="footer-chat__img">
-        Чат
-      </div>
-    </div>
-    
-    <div class="footer-time">
-      <img src="./assets/img/Volume.ico" alt="громкость" class="footer-time__img">
-      <img src="./assets/img/Music Disc.ico" alt="Disc" class="footer-time__img">
-      19:45
-    </div>
-  </footer>
 
-  <script src="./assets/script/script.js"></script>
-</body>
+      <div class="footer-inner">
+        <div class="footer-inner__comment">
+          <img
+            src="./assets/img/Move document.ico"
+            alt="иконка"
+            class="footer-comment__img"
+          />
+          Оставьте ваш комментарий
+        </div>
+        <div class="footer-inner__chat">
+          <img
+            src="./assets/img/Move document.ico"
+            alt="иконка"
+            class="footer-chat__img"
+          />
+          Чат
+        </div>
+      </div>
+
+      <div class="footer-time">
+        <img
+          src="./assets/img/Volume.ico"
+          alt="громкость"
+          class="footer-time__img"
+        />
+        <img
+          src="./assets/img/Music Disc.ico"
+          alt="Disc"
+          class="footer-time__img"
+        />
+        19:45
+      </div>
+    </footer>
+
+    <script src="./assets/script/script.js"></script>
+  </body>
 </html>
