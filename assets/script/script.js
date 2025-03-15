@@ -55,12 +55,28 @@ function checkSpam(str) {
 }
 
 // Проверить, что ссылка действительна (например, начинается с "http://" или "https://")
-function isValidUrl(url) {
-  const regex = /^(http:\/\/|https:\/\/)/;
+const isValidComplexUrl = (url) => {
+  const regex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
   return regex.test(url);
 }
 
-const addComment = () => {
+// Обработчик события submit
+form.addEventListener('submit', function (evt) {
+  evt.preventDefault(); // Отмена стандартного поведения формы
+
+  const usernameValue = transformName(username.value);
+  const avatarLinkValue = isValidComplexUrl(avatarLink.value) ? avatarLink.value : 'default-avatar.png';
+  const commentValue = checkSpam(commentText.value);
+
+  addComment(usernameValue, avatarLinkValue, commentValue);
+
+  // Очистка полей формы
+  username.value = '';
+  avatarLink.value = '';
+  commentText.value = '';
+});
+
+const addComment = (username, avatarLink, commentText) => {
   transformName(username.value);
   transformName(avatarLink.value);
   checkSpam(commentText.value);
