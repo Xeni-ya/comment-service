@@ -67,5 +67,3 @@ const addComment = () => {
 }
 
 // Создание элемента для отображения комментария
-const commentElement = document.createElement('div');
-commentElement.innerHTML = <img src="${avatarLink}" alt="Аватар" style="width:30px; height:30px;"> <strong>${username}</strong>: ${commentText};
