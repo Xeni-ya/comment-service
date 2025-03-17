@@ -8,10 +8,10 @@
   margin-top: 50px;
 }
 
-.title > div {
+.title>div {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
   margin: 0 15px;
 }
 
@@ -44,7 +44,7 @@
   font-weight: bold;
 }
 
-.inner{
+.inner {
   background-color: $grey;
   margin: 3px;
   height: 15px;
@@ -53,8 +53,8 @@
   align-items: center;
   justify-content: center;
   border-width: 1px;
-	border-style: outset;
-	border-color: $grey;
+  border-style: outset;
+  border-color: $grey;
 }
 
 .form-inner {
@@ -70,9 +70,11 @@ label {
   margin-top: 15px;
 }
 
-#username, #link, #comment {
+#username,
+#link,
+#comment {
   max-width: 320px;
-} 
+}
 
 .submit {
   margin: 15px 0px 10px 0px;
@@ -80,4 +82,31 @@ label {
   background-color: $grey;
   @include border-light-grey;
   cursor: pointer;
+}
+
+.comment-style {
+  background-color: #f0f0f0;
+  max-width: 400px;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment__style_avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment__style_username {
+  margin: 0;
+}
+
+.comment__style_text-comment {
+  margin: 5px 0 0;
 }

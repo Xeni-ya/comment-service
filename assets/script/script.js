@@ -1,44 +1,3 @@
-// function normalizeName(name) {
-//   return name.trim().toLowerCase().replace(/\s+/g, ' ').replace(/^./, match => match.toUpperCase());
-// }
-
-// function checkSpam(str) {
-//   return str.replace(/viagra/gi, '***').replace(/xxx/gi, '***');
-// }
-
-// const formElement = document.querySelector('.form-inner');
-// const button = document.querySelector('.submit');
-// const form = document.forms.form;
-// const usernameInput = form.elements.username;
-
-// // вешаем на неё обработчик события submit
-// button.addEventListener('submit', function (evt) {
-//   evt.preventDefault(); //Отмена стандартного поведения формы
-//   console.log(usernameInput.value);    //Вывод значения input
-// });
-
-// const chatDiv = document.getElementById('chat');
-
-// const chatElement = document.createElement('li');
-// chatElement.textContent = '';
-
-// chatDiv.append(chatElement);
-
-// function addComment() {
-//   const usernameInput = document.getElementById('username');
-//   const linkInput = document.getElementById('link');
-//   const commentInput = document.getElementById('comment');
-//   const button = document.querySelector('.submit');
-//   const chat = document.getElementById('chat');
-
-//   const textComment = usernameInput.value;
-// //checkSpam();
-//   chat.innerText = console.log('textComment')
-// }
-// //button.EventListener
-// addComment();
-
-
 // Найти нужный элемент
 const username = document.getElementById('username');
 const avatarLink = document.getElementById('link');
@@ -54,10 +13,10 @@ function checkSpam(str) {
   return str.replace(/viagra/gi, '***').replace(/xxx/gi, '***');
 }
 
-// Обработчик события на кнопку
-const btn = document.querySelector('.submit');
+// Обработчик события на кнопку для отправки комментария
+const sendForm = document.querySelector('.submit');
 
-btn.addEventListener('click', function (evt) {
+sendForm.addEventListener('click', function (evt) {
   evt.preventDefault(); // Отмена стандартного поведения формы
 
   const usernameValue = transformName(username.value);
@@ -72,26 +31,28 @@ btn.addEventListener('click', function (evt) {
   commentText.value = '';
 });
 
-const addComment = (username, avatarLink, comment) => {
+// Добавление комментария после того, как пользователь ввел все необходимые данные
+const addComment = (username, avatarLink, commentText) => {
   const chatDiv = document.getElementById('chat');
 
   const chatElement = document.createElement('div');
+  chatElement.classList.add('comment__style');
 
   const avatarImg = document.createElement('img');
   avatarImg.src = avatarLink;
   avatarImg.alt = 'Аватар';
-  avatarImg.style.width = '50px';
-  avatarImg.style.height = '50px';
-  avatarImg.style.borderRadius = '50%';
+  avatarImg.classList.add('comment__style_avatar');
   chatElement.appendChild(avatarImg);
 
   const nameElement = document.createElement('h3');
   nameElement.textContent = username;
+  nameElement.classList.add('comment__style_username');
   chatElement.appendChild(nameElement);
 
-  const messageElement = document.createElement('p');
-  messageElement.textContent = comment;
-  chatElement.appendChild(messageElement);
+  const textCommentElement = document.createElement('p');
+  textCommentElement.textContent = commentText;
+  textCommentElement.classList.add('comment__style_text-comment');
+  chatElement.appendChild(textCommentElement);
 
   chatDiv.appendChild(chatElement);
 }
