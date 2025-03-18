@@ -84,29 +84,32 @@ label {
   cursor: pointer;
 }
 
-.comment-style {
-  background-color: #f0f0f0;
+.comment__style {
   max-width: 400px;
   width: 100%;
-  padding: 5px;
-  border: 1px solid #ccc;
-  display: flex;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
+  margin: 15px 0px 10px 0px;
+  padding: 3px;
+  background-color: $grey;
+  @include border-light-grey;
 }
 
 .comment__style_avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 
 .comment__style_username {
-  margin: 0;
+  color: $wight;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .comment__style_text-comment {
-  margin: 5px 0 0;
+  background-color: $dark-blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 3px;
+  @include border-dark-blue;
 }

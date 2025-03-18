@@ -19,6 +19,12 @@ const sendForm = document.querySelector('.submit');
 sendForm.addEventListener('click', function (evt) {
   evt.preventDefault(); // Отмена стандартного поведения формы
 
+  // Все ли поля заполнены
+  if (!username.value || !avatarLink.value || !commentText.value) {
+    alert("Поле не заполнено! Пожалуйста, заполните все поля");
+    return;
+  }
+
   const usernameValue = transformName(username.value);
   const avatarLinkValue = avatarLink.value;
   const commentValue = checkSpam(commentText.value);
