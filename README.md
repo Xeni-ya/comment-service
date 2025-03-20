@@ -65,6 +65,10 @@ const comment3 = checkSpam("innocent rabbit") ; //результат innocent ra
 
   - Добавлять комментарий в чат.
 
+## Команда для компиляции файлов Sass (SCSS) в CSS
+
+`sass --watch assets/sass/app.scss assets/style/style.css`
+
 ## Технологии:
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)

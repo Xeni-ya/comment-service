@@ -5,6 +5,7 @@
 .title {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 50px;
 }
 
@@ -18,7 +19,8 @@
 .section {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: 80px;
+  flex-wrap: wrap;
 }
 
 .section__container {
@@ -26,6 +28,7 @@
   max-width: 400px;
   width: 100%;
   padding: 5px;
+  margin: 20px 10px 10px 10px;
   @include border-light-grey;
 }
 
@@ -73,7 +76,7 @@ label {
 #username,
 #link,
 #comment {
-  max-width: 320px;
+  max-width: 348px;
 }
 
 .submit {
@@ -91,25 +94,32 @@ label {
   padding: 3px;
   background-color: $grey;
   @include border-light-grey;
+  min-height: 50px;
+  height: 100%;
 }
 
 .comment__style_avatar {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
 }
 
 .comment__style_username {
   color: $wight;
   font-size: 1em;
   font-weight: bold;
+  background-color: $dark-blue;
+  @include border-dark-blue;
+  max-width: 326px;
+  position: relative;
+  bottom: 49px;
+  left: 49px;
 }
 
 .comment__style_text-comment {
-  background-color: $dark-blue;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 3px;
-  @include border-dark-blue;
+  max-width: 326px;
+  position: relative;
+  bottom: 42px;
+  left: 52px;
+  padding: 0 0 5px 0;
 }

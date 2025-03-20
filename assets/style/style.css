@@ -30,6 +30,7 @@ body {
 .title {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 50px;
 }
 
@@ -43,7 +44,8 @@ body {
 .section {
   display: flex;
   justify-content: space-around;
-  margin-top: 100px;
+  margin-top: 80px;
+  flex-wrap: wrap;
 }
 
 .section__container {
@@ -51,6 +53,7 @@ body {
   max-width: 400px;
   width: 100%;
   padding: 5px;
+  margin: 20px 10px 10px 10px;
   border-width: 2px;
   border-style: outset;
   border-color: #d6d6d6;
@@ -101,8 +104,10 @@ label {
   margin-top: 15px;
 }
 
-#username, #link, #comment {
-  max-width: 320px;
+#username,
+#link,
+#comment {
+  max-width: 348px;
 }
 
 .submit {
@@ -115,6 +120,47 @@ label {
   cursor: pointer;
 }
 
+.comment__style {
+  max-width: 400px;
+  width: 100%;
+  margin: 15px 0px 10px 0px;
+  padding: 3px;
+  background-color: #c7c7c8;
+  border-width: 2px;
+  border-style: outset;
+  border-color: #d6d6d6;
+  min-height: 50px;
+  height: 100%;
+}
+
+.comment__style_avatar {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+
+.comment__style_username {
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #03007b;
+  border-width: 2px;
+  border-style: inset;
+  border-color: #03007b;
+  max-width: 326px;
+  position: relative;
+  bottom: 49px;
+  left: 49px;
+}
+
+.comment__style_text-comment {
+  max-width: 326px;
+  position: relative;
+  bottom: 42px;
+  left: 52px;
+  padding: 0 0 5px 0;
+}
+
 .footer {
   background-color: #c7c7c8;
   width: 100%;
@@ -125,11 +171,16 @@ label {
   border-color: #d6d6d6;
   display: flex;
   justify-content: space-between;
-  position: fixed; /* Подвал как приклеенный */
-  bottom: 0; /* Фиксация снизу */
-  left: 0; /* К началу слева */
-  right: 0; /* Без отступов справа */
-  height: 50px; /* Задаем высоту */
+  position: fixed;
+  /* Подвал как приклеенный */
+  bottom: 0;
+  /* Фиксация снизу */
+  left: 0;
+  /* К началу слева */
+  right: 0;
+  /* Без отступов справа */
+  height: 50px;
+  /* Задаем высоту */
 }
 
 .footer-start {
@@ -146,9 +197,10 @@ label {
 .footer-inner {
   display: flex;
   position: relative;
-  right: 25%;
+  right: inherit;
 }
-.footer-inner .footer-inner__comment, .footer-inner .footer-inner__chat {
+.footer-inner .footer-inner__comment,
+.footer-inner .footer-inner__chat {
   background-color: #c7c7c8;
   width: 300px;
   margin: 0px 5px 0px 0px;
@@ -158,6 +210,12 @@ label {
   border-color: #d6d6d6;
   display: flex;
   align-items: center;
+}
+@media (min-width: 590px) {
+  .footer-inner .footer-inner__comment,
+  .footer-inner .footer-inner__chat {
+    min-width: 30px;
+  }
 }
 
 .footer-time {
