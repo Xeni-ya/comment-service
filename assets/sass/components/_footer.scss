@@ -29,8 +29,8 @@
 
 .footer-inner {
   display: flex;
-  position: relative;
-  right: inherit;
+  width: -webkit-fill-available;
+  flex-wrap: nowrap;
 
   .footer-inner__comment,
   .footer-inner__chat {
@@ -42,7 +42,7 @@
     display: flex;
     align-items: center;
 
-    @media (min-width: 590px) {
+    @media (min-width: 785px) {
       min-width: 30px;
     }
   }

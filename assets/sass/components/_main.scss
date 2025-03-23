@@ -28,8 +28,12 @@
   max-width: 400px;
   width: 100%;
   padding: 5px;
-  margin: 20px 10px 10px 10px;
+  margin: 0 10px 20px 10px;
   @include border-light-grey;
+}
+
+.margin-bottom {
+  margin-bottom: 80px;
 }
 
 .wrap {
@@ -96,6 +100,10 @@ label {
   @include border-light-grey;
   min-height: 50px;
   height: 100%;
+  display: flex;
+  // align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .comment__style_avatar {
@@ -110,16 +118,31 @@ label {
   font-weight: bold;
   background-color: $dark-blue;
   @include border-dark-blue;
-  max-width: 326px;
-  position: relative;
-  bottom: 49px;
-  left: 49px;
+  // max-width: 326px;
+  min-width: 106px;
+  width: 100%;
+  // position: relative;
+  // bottom: 49px;
+  // left: 49px;
+  flex: 1;
+  margin: 0 2px 0 5px;
+  height: 20px;
+
+  // @media (max-width: 461px) {
+  //   max-width: 285px;
+  // }
 }
 
 .comment__style_text-comment {
   max-width: 326px;
-  position: relative;
-  bottom: 42px;
-  left: 52px;
+  // position: relative;
+  // bottom: 42px;
+  // left: 52px;
   padding: 0 0 5px 0;
+  flex: 1;
+  margin: 0 2px 0 5px;
+
+  // @media (max-width: 461px) {
+  //   max-width: 285px;
+  // }
 }

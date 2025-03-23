@@ -53,10 +53,14 @@ body {
   max-width: 400px;
   width: 100%;
   padding: 5px;
-  margin: 20px 10px 10px 10px;
+  margin: 0 10px 20px 10px;
   border-width: 2px;
   border-style: outset;
   border-color: #d6d6d6;
+}
+
+.margin-bottom {
+  margin-bottom: 80px;
 }
 
 .wrap {
@@ -131,6 +135,9 @@ label {
   border-color: #d6d6d6;
   min-height: 50px;
   height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .comment__style_avatar {
@@ -147,18 +154,18 @@ label {
   border-width: 2px;
   border-style: inset;
   border-color: #03007b;
-  max-width: 326px;
-  position: relative;
-  bottom: 49px;
-  left: 49px;
+  min-width: 106px;
+  width: 100%;
+  flex: 1;
+  margin: 0 2px 0 5px;
+  height: 20px;
 }
 
 .comment__style_text-comment {
   max-width: 326px;
-  position: relative;
-  bottom: 42px;
-  left: 52px;
   padding: 0 0 5px 0;
+  flex: 1;
+  margin: 0 2px 0 5px;
 }
 
 .footer {
@@ -196,8 +203,8 @@ label {
 
 .footer-inner {
   display: flex;
-  position: relative;
-  right: inherit;
+  width: -webkit-fill-available;
+  flex-wrap: nowrap;
 }
 .footer-inner .footer-inner__comment,
 .footer-inner .footer-inner__chat {
@@ -211,7 +218,7 @@ label {
   display: flex;
   align-items: center;
 }
-@media (min-width: 590px) {
+@media (min-width: 785px) {
   .footer-inner .footer-inner__comment,
   .footer-inner .footer-inner__chat {
     min-width: 30px;
