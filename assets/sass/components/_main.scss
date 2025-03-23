@@ -101,7 +101,6 @@ label {
   min-height: 50px;
   height: 100%;
   display: flex;
-  // align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
@@ -112,37 +111,28 @@ label {
   object-fit: cover;
 }
 
+.comment__style_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .comment__style_username {
   color: $wight;
   font-size: 1em;
   font-weight: bold;
   background-color: $dark-blue;
   @include border-dark-blue;
-  // max-width: 326px;
-  min-width: 106px;
+  max-width: 325px;
   width: 100%;
-  // position: relative;
-  // bottom: 49px;
-  // left: 49px;
   flex: 1;
   margin: 0 2px 0 5px;
   height: 20px;
-
-  // @media (max-width: 461px) {
-  //   max-width: 285px;
-  // }
 }
 
 .comment__style_text-comment {
-  max-width: 326px;
-  // position: relative;
-  // bottom: 42px;
-  // left: 52px;
-  padding: 0 0 5px 0;
+  max-width: 325px;
+  padding: 5px 0 5px 0;
   flex: 1;
   margin: 0 2px 0 5px;
-
-  // @media (max-width: 461px) {
-  //   max-width: 285px;
-  // }
 }

@@ -146,6 +146,12 @@ label {
   object-fit: cover;
 }
 
+.comment__style_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .comment__style_username {
   color: #ffffff;
   font-size: 1em;
@@ -154,7 +160,7 @@ label {
   border-width: 2px;
   border-style: inset;
   border-color: #03007b;
-  min-width: 106px;
+  max-width: 325px;
   width: 100%;
   flex: 1;
   margin: 0 2px 0 5px;
@@ -162,8 +168,8 @@ label {
 }
 
 .comment__style_text-comment {
-  max-width: 326px;
-  padding: 0 0 5px 0;
+  max-width: 325px;
+  padding: 5px 0 5px 0;
   flex: 1;
   margin: 0 2px 0 5px;
 }

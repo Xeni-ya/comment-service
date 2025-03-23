@@ -50,15 +50,20 @@ const addComment = (username, avatarLink, commentText) => {
   avatarImg.classList.add('comment__style_avatar');
   chatElement.appendChild(avatarImg);
 
+  // Создан новый див с классом comment__style_content, который оборачивает nameElement и textCommentElement
+  const contentDiv = document.createElement('div');
+  contentDiv.classList.add('comment__style_content');
+  chatElement.appendChild(contentDiv);
+
   const nameElement = document.createElement('h3');
   nameElement.textContent = username;
   nameElement.classList.add('comment__style_username');
-  chatElement.appendChild(nameElement);
+  contentDiv.appendChild(nameElement);
 
   const textCommentElement = document.createElement('p');
   textCommentElement.textContent = commentText;
   textCommentElement.classList.add('comment__style_text-comment');
-  chatElement.appendChild(textCommentElement);
+  contentDiv.appendChild(textCommentElement);
 
   chatDiv.appendChild(chatElement);
 }
