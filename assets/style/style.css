@@ -59,6 +59,10 @@ body {
   border-color: #d6d6d6;
 }
 
+.max-height {
+  max-height: 455px;
+}
+
 .margin-bottom {
   margin-bottom: 80px;
 }
@@ -127,7 +131,7 @@ label {
 .comment__style {
   max-width: 400px;
   width: 100%;
-  margin: 15px 0px 10px 0px;
+  margin: 5px 0px 5px 0px;
   padding: 3px;
   background-color: #c7c7c8;
   border-width: 2px;
@@ -144,6 +148,7 @@ label {
   width: 45px;
   height: 45px;
   object-fit: cover;
+  margin: 0 5px 0 0;
 }
 
 .comment__style_content {
@@ -163,8 +168,8 @@ label {
   max-width: 325px;
   width: 100%;
   flex: 1;
-  margin: 0 2px 0 5px;
   height: 20px;
+  padding-left: 5px;
 }
 
 .comment__style_text-comment {
