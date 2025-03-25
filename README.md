@@ -26,6 +26,6 @@ const comment3 = checkSpam("innocent rabbit") ; //результат innocent ra
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-<!-- ## Результат:
+## Результат:
 
-[Перейти по ссылке 👈 ](https://xeni-ya.github.io/comment-service/) -->
+[Перейти по ссылке 👈 ](https://xeni-ya.github.io/comment-service/)
